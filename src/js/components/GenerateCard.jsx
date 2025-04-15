@@ -43,7 +43,7 @@ export const GenerateCards = () => {
       const newColor = (randomSuit === 1 || randomSuit === 2) ? 'black' : 'red';
       
       
-      const cardStyle = {
+      /*const cardStyle = {
         width: '350px',
         height: '500px',
         border: '1px solid black',
@@ -68,7 +68,7 @@ export const GenerateCards = () => {
         margin: '20px 0'
       };
       
-     
+     */
     };
 
       
@@ -77,9 +77,9 @@ export const GenerateCards = () => {
   return (
     <>
       <div className="container-fluid text-center card my-5 border border-black ">
-        <div style={iconStyle}>{card.newSuit}</div>
-        <div style={cardStyle}>{card.newColor}</div>
-        <div style={numberStyle}>{card.newNumber}</div>
+        <div style={}>{}</div>
+        <div style={}>{}</div>
+        <div style={}>{}</div>
       </div>
     
 
