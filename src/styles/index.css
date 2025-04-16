@@ -1,0 +1,17 @@
+.size-image{
+    width: 500px;
+    height: 325px;
+    object-fit: cover;
+    max-width: 100%;
+   
+}
+
+.card-size{
+    width: 500px;
+}
+.foot-size{
+    height: 60px;
+    font-size: x-large;
+    color:black;
+    text-align: center;
+}

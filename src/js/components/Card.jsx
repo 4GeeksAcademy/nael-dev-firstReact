@@ -1,46 +1,36 @@
 import React from "react";
 
-export const Card = (props) => {
+export const Card = ({imagen,title, text, buttonText,link}) => {
+
     return (
-        <div className="card mx-2" style={{ width: '18rem' }}>
-            <img src={props} className="card-img-top" alt="..." />
+        <div className="card m-2 card-size">
+            <img src={imagen} className="card-img-top size-image" alt="Imagen del anime" />
             <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <h5 className="card-title text-center">{title}</h5>
+                <p className="card-text">{text}</p>
+                <a href={link} className="btn btn-success d-flex justify-content-center">{buttonText}</a>
             </div>
         </div>
     )
 }
 
-export const GroupCard = () => {
-    const images = [
-        "https://cdn.sanity.io/images/5vm5yn1d/pro/5cb1f9400891d9da5a4926d7814bd1b89127ecba-1300x867.jpg?fm=webp&q=80",
-        "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSAejl8kFsEhkLfTx-k46MnpohqAx4KuG0jOqdlKuc-ubFa-buzE2ImhchET0cpafPIqrXHvbYZ7f6gP2XhQGU1lg",
-        "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQVpHoNY7fNuiiCf-fqZ0_6tz42XzNiqdK-R-XI-r_K-mAO3TnbuCKANshFwAZSGRpZMfVji1l7i3qFwYhjIznGzQ",
-        "https://static.wikia.nocookie.net/reinoanimalia/images/8/88/Zorro_rojo_4.png/revision/latest?cb=20130514223627&path-prefix=es"
-
-    ];
-
-
-
+export const Jumbotron = () => {
     return (
-        <div className="card-group">
-            images.map((imagen,index)=>(
-            <Card key={index} props={imagen} />
-            ))
-            
-            
-          
+        <div className=" p-5 mb-4 bg-body-tertiary rounded-3">
+            <div className="container-fluid py-5">
+                <h1 className="display-5 fw-bold">El rincón friki de React</h1>
+                <p className="col-md-8 fs-4">Este es un ejemplo de la primera web creada con react por mi
+                </p>
+                <button className="btn btn-success btn-lg" type="button">Botón que no hace na</button>
+            </div>
         </div>
-
     )
 }
 
 
 export const Nav = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-primary">
+        <nav className="navbar navbar-expand-lg bg-success">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">Navbar</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,8 +71,8 @@ export const Nav = () => {
 
 export const Foot = () => {
     return (
-        <div className="card-footer">
-            Este es el pie de Página
+        <div className="card-footer d-flex justify-content-center bg bg-success foot-size m-2">
+            Copyright@ NaelDiaz
         </div>
     )
 }
